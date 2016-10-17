@@ -1,8 +1,7 @@
+#Creating the list for the doors
 doors = [False]*100
 
-def doors_close():
-    global doors
-
+#defining the door alternating function
 def doors_open():
     global doors
     for i in range(100): 
@@ -13,31 +12,14 @@ def doors_open():
                 doors[j] = True         
     for i in range(0,100):   
         if doors[i] == True:
-            print(i+1,end=", ")            
-    print("\n")
+            if i<99:
+                print("%i," % (i+1), end=" ") 
+            else:
+                print("%i" % (i+1), end=" ")       
 
-print("The following doors are opened: ")
-doors_close()
+print("The following doors are opened: ", end=" ")
 doors_open()
-
-
-
-#for i in doors[1:]:
-#   doors[i]=False
-#    if doors[i] == True:
-#        print(i, end=", ")
-
-#for j in doors[1:]:
-#    doors[j] = False
-
-
-#for i in doors[1:]:
-#    j = not j:
-#    if j == True:
-#        print(i, end=", ")
-
-
-
+print("\n")
 
 
 
